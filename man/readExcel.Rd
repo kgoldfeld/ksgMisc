@@ -2,8 +2,7 @@
 % Please edit documentation in R/rwExcel.R
 \name{readExcel}
 \alias{readExcel}
-\title{Wrapper for read.table that reads from the clipboard into a data.frame with
-or without the header - works only on Windows.}
+\title{Reads from clipboard into data.frame: windows}
 \usage{
 readExcel(header = TRUE, ...)
 }

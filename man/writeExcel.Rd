@@ -2,8 +2,7 @@
 % Please edit documentation in R/rwExcel.R
 \name{writeExcel}
 \alias{writeExcel}
-\title{Wrapper for write.table that writes to the clipboard from a data.frame with
-the header - works only on Windows.}
+\title{Writes from data frame to the clipboard: windows only}
 \usage{
 writeExcel(x, row.names = FALSE, col.names = TRUE, ...)
 }

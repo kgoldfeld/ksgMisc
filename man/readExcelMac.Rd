@@ -2,8 +2,7 @@
 % Please edit documentation in R/rwExcel.R
 \name{readExcelMac}
 \alias{readExcelMac}
-\title{Wrapper for read.table that reads from the clipboard into a data.frame with
-or without the header - works only on a Mac.}
+\title{Reads from clipboard into data.frame: mac}
 \usage{
 readExcelMac(header = TRUE, ...)
 }

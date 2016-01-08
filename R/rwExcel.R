@@ -1,5 +1,7 @@
 #  readExcel
 
+#' Reads from clipboard into data.frame: windows
+#'
 #' Wrapper for read.table that reads from the clipboard into a data.frame with
 #' or without the header - works only on Windows.
 #'
@@ -14,6 +16,8 @@ readExcel <- function(header=TRUE,...) {
 
 #  readExcelMac
 
+#' Reads from clipboard into data.frame: mac
+#'
 #' Wrapper for read.table that reads from the clipboard into a data.frame with
 #' or without the header - works only on a Mac.
 #'
@@ -28,6 +32,8 @@ readExcelMac <- function(header=TRUE,...) {
 
 #  readExcelMac
 
+#' Writes from data frame to the clipboard: windows only
+#'
 #' Wrapper for write.table that writes to the clipboard from a data.frame with
 #' the header - works only on Windows.
 #'
