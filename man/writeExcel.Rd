@@ -9,9 +9,9 @@ writeExcel(x, row.names = FALSE, col.names = TRUE, ...)
 \arguments{
 \item{x}{data frame}
 
-\item{row.names}{True or False}
+\item{row.names}{True / False}
 
-\item{col.names}{True or False}
+\item{col.names}{True / False}
 
 \item{...}{extra arguments}
 }

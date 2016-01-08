@@ -5,7 +5,7 @@
 #' Wrapper for read.table that reads from the clipboard into a data.frame with
 #' or without the header - works only on Windows.
 #'
-#' @param header True or False.
+#' @param header True / False.
 #' @param ... extra arguments
 #' @return A data frame
 #' @export
@@ -21,7 +21,7 @@ readExcel <- function(header=TRUE,...) {
 #' Wrapper for read.table that reads from the clipboard into a data.frame with
 #' or without the header - works only on a Mac and is limited to 100 lines.
 #'
-#' @param header True or False.
+#' @param header True / False.
 #' @param ... extra arguments
 #' @return A data frame
 #' @export
@@ -38,8 +38,8 @@ readExcelMac <- function(header=TRUE,...) {
 #' the header - works only on Windows.
 #'
 #' @param x data frame
-#' @param row.names True or False
-#' @param col.names True or False
+#' @param row.names True / False
+#' @param col.names True / False
 #' @param ... extra arguments
 #' @return Pastes data frame to clipboard
 #' @export
