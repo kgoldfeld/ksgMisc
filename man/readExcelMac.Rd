@@ -16,6 +16,6 @@ A data frame
 }
 \description{
 Wrapper for read.table that reads from the clipboard into a data.frame with
-or without the header - works only on a Mac.
+or without the header - works only on a Mac and is limited to 100 lines.
 }
 
