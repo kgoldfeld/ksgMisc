@@ -1,0 +1,17 @@
+Package: ksgMisc
+Type: Package
+Title: KSG Miscellaneous Functions
+Version: 0.0.0.9000
+Date: 2016-01-04
+Authors@R: person("Keith", "Goldfeld", email = "Keith.Goldfeld@nyumc.org",
+                  role = c("aut", "cre"))
+Author: Keith Goldfeld [aut]
+Mainainer: Keith Goldfeld <Keith.Goldfeld@nyumc.org>
+Description: A collection of miscellaneous functions that for general use.
+Depends:
+    R (>= 3.2.2),
+    data.table
+License: GPL-3
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Suggests: testthat
