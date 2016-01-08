@@ -7,7 +7,7 @@
 readExcel(header = TRUE, ...)
 }
 \arguments{
-\item{header}{True or False.}
+\item{header}{True/False.}
 
 \item{...}{extra arguments}
 }
