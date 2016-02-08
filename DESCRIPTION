@@ -10,7 +10,9 @@ Mainainer: Keith Goldfeld <Keith.Goldfeld@nyumc.org>
 Description: A collection of miscellaneous functions that for general use.
 Depends:
     R (>= 3.2.2),
-    data.table
+    data.table,
+    ggplot2,
+    grid
 License: GPL-3
 LazyData: TRUE
 RoxygenNote: 5.0.1
