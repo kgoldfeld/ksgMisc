@@ -4,5 +4,5 @@
 #' @export
 #'
 printbranch <- function() {
-  cat("hello, world! Is this a new branch?")
+  cat("hello, world! Is this the second branch?")
 }
