@@ -4,7 +4,7 @@
 \alias{sumData}
 \title{Create summary - n, mean, sd, min, max of all numerical data}
 \usage{
-sumData(dt)
+sumData(dt, threshold = NULL)
 }
 \arguments{
 \item{dt}{a data.table with at least one numeric column}

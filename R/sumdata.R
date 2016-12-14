@@ -7,7 +7,7 @@
 #'
 
 
-sumData <- function(dt) {
+sumData <- function(dt, threshold = NULL) {
 
   dtNames <- names(dt)
   n <- length(dtNames)
@@ -20,11 +20,13 @@ sumData <- function(dt) {
   maxs <- list()
   mins <- list()
   median <- list()
+  belowth <- list()
 
   table.t <- list()
 
   j <- 0
   k <- 0
+
 
   for (i in (1:n)) {
 
@@ -42,6 +44,9 @@ sumData <- function(dt) {
       means[[j]] <- mean(colI, na.rm = TRUE)
       sds[[j]] <- sd(colI, na.rm = TRUE)
       median[[j]] <- median(colI, na.rm = TRUE)
+      if (!(is.null(threshold))) {
+        belowth[[j]] <- sum((colI < threshold), na.rm = TRUE)
+      }
 
     } else if (is.factor(colI)) {
 
@@ -55,15 +60,36 @@ sumData <- function(dt) {
     }
   }
 
-  sumdat <- data.table::data.table(varName = unlist(varname),
-                                   N = unlist(N),
-                                   missing = unlist(missing),
-                                   min = unlist(mins),
-                                   max = unlist(maxs),
-                                   mean = unlist(means),
-                                   sd = unlist(sds),
-                                   median = unlist(median)
-  )
+
+  if (length(varname) > 0) { # continuous variables
+
+    if (is.null(threshold)) {
+      sumdat <- data.table::data.table(varName = unlist(varname),
+                                       N = unlist(N),
+                                       missing = unlist(missing),
+                                       min = unlist(mins),
+                                       max = unlist(maxs),
+                                       mean = unlist(means),
+                                       sd = unlist(sds),
+                                       median = unlist(median)
+      )
+    }  else {
+      sumdat <- data.table::data.table(varName = unlist(varname),
+                                       N = unlist(N),
+                                       missing = unlist(missing),
+                                       belowTH = unlist(belowth),
+                                       min = unlist(mins),
+                                       max = unlist(maxs),
+                                       mean = unlist(means),
+                                       sd = unlist(sds),
+                                       median = unlist(median)
+      )
+    }
+  } else { # no continuous variables
+
+    sumdat <- NULL
+
+  }
 
   return(list(sumdat, table.t))
 
