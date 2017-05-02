@@ -5,5 +5,5 @@
 #' @export
 
 logitP <- function(p) {
-  return(log(ksgMsic::odds(p)))
+  return(log(ksgMisc::odds(p)))
 }
