@@ -15,4 +15,3 @@ Numeric
 \description{
 Converts logodds to probabilty
 }
-

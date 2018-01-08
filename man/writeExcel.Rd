@@ -22,4 +22,3 @@ Pastes data frame to clipboard
 Wrapper for write.table that writes to the clipboard from a data.frame with
 the header - works only on Windows.
 }
-

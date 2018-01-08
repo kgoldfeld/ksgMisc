@@ -15,4 +15,3 @@ Numeric
 \description{
 Calculates log odds of a probability
 }
-

@@ -15,4 +15,3 @@ ggplot theme
 \description{
 Removes axis titles quickly ...
 }
-

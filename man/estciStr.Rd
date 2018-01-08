@@ -17,4 +17,3 @@ A data.table that stores a confidence interval in string format
 \description{
 Create a data.table of ci strings
 }
-

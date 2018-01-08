@@ -15,4 +15,3 @@ ggplot theme
 \description{
 Resets defaults for themes ...
 }
-

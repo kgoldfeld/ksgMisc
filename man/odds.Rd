@@ -15,4 +15,3 @@ Numeric
 \description{
 Calculates odds of a probability
 }
-

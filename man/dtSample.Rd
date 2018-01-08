@@ -21,4 +21,3 @@ A vector
 \description{
 Sample ids from a data.table
 }
-

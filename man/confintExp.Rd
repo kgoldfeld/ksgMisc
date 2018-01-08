@@ -15,4 +15,3 @@ Data.table that stores a confidence interval
 \description{
 Estimate confidence intervals from GLM
 }
-

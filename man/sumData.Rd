@@ -15,4 +15,3 @@ A data.table with summary stats: n, min, max, mean, sd
 \description{
 Create summary - n, mean, sd, min, max of all numerical data
 }
-

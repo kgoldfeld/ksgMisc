@@ -18,4 +18,3 @@ A data frame
 Wrapper for read.table that reads from the clipboard into a data.frame with
 or without the header - works only on Windows.
 }
-

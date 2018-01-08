@@ -2,7 +2,7 @@
 % Please edit documentation in R/bitsToInt.R
 \name{bitsToInt}
 \alias{bitsToInt}
-\title{Converts vector of 1's and 0's to integer ...}
+\title{Plots number of simstudy downloads ...}
 \usage{
 bitsToInt(x)
 }
@@ -13,6 +13,5 @@ bitsToInt(x)
 Integer value of vector
 }
 \description{
-Converts vector of 1's and 0's to integer ...
+Plots number of simstudy downloads ...
 }
-
