@@ -22,9 +22,9 @@ simstudyDL <- function(period = 7, package = "simstudy", cumulative = FALSE) {
 
   p <- ggplot2::ggplot(data=dlagg, ggplot2::aes(x = mdate, y=count)) +
     ggplot2::geom_line() +
-    ylab("Count") +
-    theme(axis.title.x = element_blank(),
-          panel.grid.minor = element_blank()
+    ggplot2::ylab("Count") +
+    ggplot2::theme(axis.title.x = ggplot2::element_blank(),
+                   panel.grid.minor = ggplot2::element_blank()
     )
 
   return(p)
