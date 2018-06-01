@@ -2,7 +2,7 @@ Package: ksgMisc
 Type: Package
 Title: KSG Miscellaneous Functions
 Version: 0.0.1
-Date: 2018-01-08
+Date: 2018-06-01
 Authors@R: person("Keith", "Goldfeld", email = "Keith.Goldfeld@nyumc.org",
                   role = c("aut", "cre"))
 Author: Keith Goldfeld [aut]
