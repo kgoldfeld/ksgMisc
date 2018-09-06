@@ -4,7 +4,7 @@
 \alias{replaceInFiles}
 \title{Find and replace text in all files in a directory}
 \usage{
-replaceInFiles(directory, oldtext, newtext)
+replaceInFiles(directory, oldtext, newtext, verbose = TRUE)
 }
 \arguments{
 \item{directory}{Location of files to be changed}
@@ -12,6 +12,8 @@ replaceInFiles(directory, oldtext, newtext)
 \item{oldtext}{Current text}
 
 \item{newtext}{New text}
+
+\item{verbose}{Indicates whether updated files should be printed. Defaults to TRUE.}
 }
 \value{
 Nothing
