@@ -4,8 +4,7 @@
 #' @return plot
 #' @export
 
-
-simstudyDL <- function(period = 7, package = "simstudy", cumulative = FALSE) {
+pkgDLplot <- function(period = 7, package = "simstudy", cumulative = FALSE) {
 
   downloads <- data.table::data.table(cranlogs::cran_downloads(packages = c(package),
                                                    from = "2016-06-21", to = Sys.Date()))

@@ -7,7 +7,7 @@
 #'
 rndTidy <- function(modelFit, digits = 2) {
 
-  tidyTable <- broom::tidy(modelFit)
+  tidyTable <- data.frame(broom::tidy(modelFit))
 
   for (i in 1:ncol(tidyTable)) {
 
@@ -16,6 +16,6 @@ rndTidy <- function(modelFit, digits = 2) {
 
   }
 
-  return(tidyTable)
+  return(data.table::data.table(tidyTable))
 
 }
