@@ -4,26 +4,45 @@
 #' @return plot
 #' @export
 
-pkgDLplot <- function(period = 7, package = "simstudy", cumulative = FALSE) {
+pkgDLplot <- function(package = "simstudy", by_period = "day", cumulative = TRUE) {
 
-  downloads <- data.table::data.table(cranlogs::cran_downloads(packages = c(package),
-                                                   from = "2016-06-21", to = Sys.Date()))
-  nperiods <- ceiling(nrow(downloads) / period)
+  downloads <- data.table::data.table(cranlogs::cran_downloads(packages = c("simstudy"),
+                                                               from = "2016-06-21", to = Sys.Date()))
 
-  suppressWarnings(downloads[, period := rep(1:nperiods, each = period)])
-  downloads[, mdate := min(date), keyby = period]
+  downloads[, `:=`(month = data.table::month(date),
+                   year = data.table::year(date))]
 
-  dlagg <- downloads[, .(count = sum(count)), keyby = mdate]
+  if (by_period == "month") {
 
-  if (cumulative) {
-    dlagg[, count := cumsum(count)]
+    pdata <- downloads[, .(count = sum(count)), keyby = .(year, month)]
+    pdata[, mdate := ISOdate(year = year, month = month, day = 1)]
+    if (cumulative) pdata[, count := cumsum(count)]
+
+    p <- ggplot2::ggplot(data=pdata, ggplot2::aes(x = mdate, y=count))
+
+
+  } else if (by_period == "year") {
+
+    pdata <- downloads[, .(count = sum(count)), keyby = .(year)]
+    if (cumulative) pdata[, count := cumsum(count)]
+
+    p <- ggplot2::ggplot(data=pdata, ggplot2::aes(x = year, y=count))
+
+  } else {
+
+    pdata <- downloads
+    if (cumulative) pdata[, count := cumsum(count)]
+
+    p <- ggplot2::ggplot(data=pdata, ggplot2::aes(x = date, y=count))
+
   }
 
-  p <- ggplot2::ggplot(data=dlagg, ggplot2::aes(x = mdate, y=count)) +
-    ggplot2::geom_line() +
+  p <- p +
+    ggplot2::geom_line(size = 1.5, color = "#7fab4a") +
     ggplot2::ylab("Count") +
     ggplot2::theme(axis.title.x = ggplot2::element_blank(),
-                   panel.grid.minor = ggplot2::element_blank()
+                   panel.grid.minor = ggplot2::element_blank(),
+                   panel.grid.major.y = ggplot2::element_blank()
     )
 
   return(p)
