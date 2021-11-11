@@ -4,10 +4,14 @@
 \alias{pkgDLplot}
 \title{PLots number of simstudy downloads ...}
 \usage{
-pkgDLplot(period = 7, package = "simstudy", cumulative = FALSE)
+pkgDLplot(package = "simstudy", by_period = "day", cumulative = TRUE)
 }
 \arguments{
-\item{period}{Integer value length of period, defaults to 7 (week)}
+\item{package}{String}
+
+\item{by_period}{"day" (default), "month", or "year"}
+
+\item{cumulative}{TRUE (default) or FALSE}
 }
 \value{
 plot

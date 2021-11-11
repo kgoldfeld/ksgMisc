@@ -1,9 +1,10 @@
 #' PLots number of simstudy downloads ...
 #'
-#' @param period Integer value length of period, defaults to 7 (week)
+#' @param package String
+#' @param by_period "day" (default), "month", or "year"
+#' @param cumulative TRUE (default) or FALSE
 #' @return plot
 #' @export
-
 pkgDLplot <- function(package = "simstudy", by_period = "day", cumulative = TRUE) {
 
   downloads <- data.table::data.table(cranlogs::cran_downloads(packages = c("simstudy"),
